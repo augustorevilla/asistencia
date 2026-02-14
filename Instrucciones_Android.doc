@@ -1,0 +1,62 @@
+<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'>
+<head>
+<meta charset="utf-8">
+<title>Guía de Instalación en Android</title>
+<style>
+body { font-family: 'Calibri', 'Arial', sans-serif; font-size: 11pt; }
+h1 { color: #2E74B5; border-bottom: 2px solid #2E74B5; padding-bottom: 10px; }
+h2 { color: #2E74B5; margin-top: 20px; }
+.step { margin-bottom: 10px; }
+.note { color: #666; font-style: italic; background-color: #f0f0f0; padding: 10px; border-radius: 5px; }
+</style>
+</head>
+<body>
+
+<h1>Cómo Instalar la App "Tomar Asistencia" en Android</h1>
+
+<p>Esta aplicación es una <strong>Web App (PWA)</strong>. No se descarga de la Play Store, sino que se instala directamente desde el navegador Google Chrome.</p>
+
+<div class="note">
+    <strong>Nota Importante:</strong> Para que la instalación funcione, la aplicación debe estar "publicada" o "servida" en una red. No funcionará si solo copias los archivos al celular con un cable USB.
+</div>
+
+<h2>Opción 1: Instalación Permanente (Recomendada)</h2>
+<p>Lo ideal es subir los archivos a un sitio gratuito para que puedas acceder desde cualquier lugar.</p>
+<ol>
+    <li class="step">Sube la carpeta del proyecto a un servicio como <strong>GitHub Pages</strong> o <strong>Netlify Drop</strong>.</li>
+    <li class="step">Obtendrás un enlace (link), por ejemplo: <code>https://tu-usuario.github.io/asistencia</code>.</li>
+    <li class="step">Envía ese enlace a tu celular (por WhatsApp o correo).</li>
+</ol>
+
+<h2>Opción 2: Prueba Local (Solo en casa)</h2>
+<p>Si solo quieres probarla sin subirla a internet:</p>
+<ol>
+    <li class="step">Conecta tu computadora y tu celular a la <strong>misma red Wi-Fi</strong>.</li>
+    <li class="step">En tu computadora, abre una terminal en la carpeta del proyecto y ejecuta:
+        <br><code>python -m http.server 8000</code>
+    </li>
+    <li class="step">Averigua la <strong>Dirección IP</strong> de tu computadora:
+        <ul>
+            <li>En la terminal escribe <code>ipconfig</code> y presiona Enter.</li>
+            <li>Busca donde diga "Dirección IPv4" (ejemplo: <code>192.168.1.15</code>).</li>
+        </ul>
+    </li>
+    <li class="step">En el navegador de tu celular, escribe la dirección IP seguida de <code>:8000</code>.
+        <br>Ejemplo: <code>http://192.168.1.15:8000</code>
+    </li>
+</ol>
+
+<h2>Paso Final: Instalar en el Celular</h2>
+<p>Una vez que hayas abierto la app en Chrome de tu celular (ya sea con el link de internet o el link local):</p>
+
+<ol>
+    <li class="step">Verás la aplicación abierta en Chrome.</li>
+    <li class="step">Toca el botón de <strong>Menú</strong> (los tres puntitos verticales en la esquina superior derecha).</li>
+    <li class="step">Busca y toca la opción que dice <strong>"Instalar aplicación"</strong> o <strong>"Agregar a la pantalla principal"</strong>.</li>
+    <li class="step">Confirma la instalación tocando "Instalar".</li>
+</ol>
+
+<p>¡Listo! Ahora verás el ícono de la app "Tomar Asistencia" en el menú de aplicaciones de tu celular. Podrás abrirla incluso si pones el celular en "Modo Avión".</p>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomar Asistencia</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="theme-color" content="#6200ea">
+    <link rel="icon" type="image/png" href="icon-192.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <header class="app-header">
+            <h1>Asistencia</h1>
+            <nav id="main-nav">
+                <!-- Navigation will be injected by JS -->
+            </nav>
+        </header>
+
+        <main id="main-content">
+            <!-- Dynamic content will be injected here -->
+            <div class="loading-spinner">Cargando...</div>
+        </main>
+
+        <button id="fab" class="fab" aria-label="Agregar">+</button>
+        
+        <div id="toast-container"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/db.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        // Register Service Worker
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('serviceWorker.js')
+                    .then(reg => console.log('SW registrado', reg))
+                    .catch(err => console.log('SW falló', err));
+            });
+        }
+    </script>
+</body>
+</html>
